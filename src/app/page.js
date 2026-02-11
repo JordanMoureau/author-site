@@ -1,73 +1,67 @@
+import Footer from "./components/footer";
+import Navigation from "./components/nav";
+
 export const metadata = {
-  title: "Jordan Moureau | Author (Coming Soon)",
-  description: "Official author site for Jordan Moureau. Coming soon.",
+  title: "J. Moureau | Author of the Aster of Warhaven series",
+  description:
+    "Official author site of J. Moureau, author of the Aster of Warhaven Series.",
 };
 
 export default function Home() {
   return (
-    <main className="page">
-      <div className="container">
-        <header className="hero">
-          <div className="heroText">
-            <div className="badge">
-              <span className="dot" aria-hidden="true" />
-              Coming soon
+    <>
+      <div className="card">
+        <div className="hero">
+          <img className="avatar" src="/profile.JPG" />
+          <div className="hero-column">
+            <div className=" status ">
+              <span className="dot" />
+              Currently Editing
             </div>
-
-            <h1 className="title">Jordan Moureau</h1>
-
-            <p className="lede">
-              I’m a Young Adult fantasy author currently working on finding a
-              home for my debut novel. This site will grow as things progress.
-            </p>
+            <div className="header-text">
+              <h1>J. Moureau</h1>
+              <div className="sub-head">
+                Author of the aster of warhaven series
+              </div>
+            </div>
           </div>
-          <div className="avatarWrap" aria-hidden="true">
-            <img className="avatarImg" src="/profile.JPG" alt="" />
-          </div>
-        </header>
-        <section className="card">
-          <h2 className="cardTitle">Status</h2>
-          <p className="callout status">
-            Probably writing a pain-in-the-ass heroine and mouthing off at the
-            nearest authority figure.
-          </p>
-        </section>
-
-        <section className="card">
-          <h2 className="cardTitle">What’s coming</h2>
-
-          <ul className="list">
-            <li>Updates on current and future projects</li>
-            <li>Book announcements</li>
-            <li>Newsletter signup (eventually)</li>
-          </ul>
-
-          <div className="callout">
-            <p className="calloutText">
-              For now, the best place to follow along is Instagram.
-            </p>
-
-            <a
-              className="button"
-              href="https://instagram.com/writermoureau"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @writermoureau
-            </a>
-          </div>
-        </section>
-
-        <div className="divider" aria-hidden="true">
-          <span className="dividerLine" />
-          <span className="dividerEmoji">♥️🗡️ 🌞</span>
-          <span className="dividerLine" />
         </div>
-
-        <footer className="footer">
-          © {new Date().getFullYear()} Jordan Moureau
-        </footer>
       </div>
-    </main>
+      <Navigation />
+
+      <div className="card">
+        <h2 className="border-bottom">Coming Soon</h2>
+
+        <h3>Aster of Warhaven</h3>
+        <p>
+          In Aster's family, war is their love language. So when her mom leaves
+          her newborn at the doorstep of the most notorious band of mercenaries
+          then disappears without a trace, no on ebats an eye.
+          <br />
+          <br />
+          Sixteen years later, Aster is a bit salty. Deep in the throes of teen
+          rebellion, she heads out on her first real job as an ordained
+          mercenary. She's got the wind in her brigandine and she's not looking
+          back...
+        </p>
+
+        <a className="inline-link" href="/">
+          Read Aster
+        </a>
+      </div>
+
+      <div className="card">
+        <div className="row">
+          <div className="column">
+            <h2>Subscribe To..</h2>
+            <p>
+              ...be the first to hear about release dates, see new covers, get
+              exclusive character art, author events, workshops & more...
+            </p>
+          </div>
+          <input placeholder="email address..." />
+        </div>
+      </div>
+    </>
   );
 }
