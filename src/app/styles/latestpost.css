@@ -1,0 +1,14 @@
+.latest-blog-img {
+  height: 35vh;
+  object-position: center;
+  margin-top: 1rem;
+}
+
+.post-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+}

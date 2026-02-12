@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
         <MobileNav />
         <div className="background-overlay"> </div>
         {children}
+
         <Footer />
       </body>
     </html>

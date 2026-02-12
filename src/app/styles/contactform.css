@@ -1,0 +1,65 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0rem;
+
+  .button {
+    width: fit-content;
+    font-size: 1.7rem;
+    padding: 0.3rem 1.8rem;
+    margin-top: 1rem;
+  }
+
+  .row {
+    align-items: start;
+    justify-content: start;
+  }
+}
+
+.width-quarter {
+  width: 30%;
+}
+
+.width-half {
+  width: 50%;
+}
+
+textarea {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  height: fit-content;
+  border-radius: 30px;
+  width: 100%;
+  font-family: "myriad";
+  font-family: myriad-pro, sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding: 1rem;
+  color: white;
+  font-style: italic;
+  text-transform: uppercase;
+  height: 250px;
+}
+
+textarea::placeholder {
+  color: white;
+}
+
+textarea:focus {
+  outline: none;
+  background-color: var(--hover);
+}
+
+.column-align {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--border);
+}

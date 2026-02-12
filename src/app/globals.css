@@ -1,3 +1,6 @@
+@import "./styles/latestpost.css";
+@import "./styles/contactform.css";
+
 @font-face {
   font-family: "Blastimo";
   src: url("/Blastimo.woff") format("woff"),
@@ -12,10 +15,11 @@
 --------------------------- */
 :root {
   --bg: #8a998a;
-  --border: #d4d6dd;
+  --border: #ffffff;
   --radius: 30px;
-
-  --background: rgba(212, 214, 221, 0.28);
+  --lightwhite: rgba(255, 255, 255, 0.3);
+  --background: rgba(138, 153, 138, 0.4);
+  --hover: rgba(175, 191, 175, 0.8);
 }
 
 /* ---------------------------
@@ -41,6 +45,17 @@ body {
   font-family: myriad-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .background-overlay {
@@ -78,9 +93,17 @@ h2 {
 h3 {
   font-family: "myriad";
   font-family: myriad-pro, sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 2rem;
   margin: 0;
+}
+
+h4 {
+  font-family: myriad-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 p {
@@ -108,7 +131,6 @@ a {
 
 .inline-link {
   text-decoration: underline;
-  margin-top: 1rem;
 }
 
 .button {
@@ -130,7 +152,8 @@ a {
 }
 
 .button:hover {
-  background-color: rgba(212, 214, 221, 0.7);
+  background-color: var(--hover);
+  cursor: pointer;
 }
 
 .hero {
@@ -177,11 +200,7 @@ input::placeholder {
 
 input:focus {
   outline: none;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
+  background-color: var(--hover);
 }
 
 .card {
@@ -192,12 +211,23 @@ input:focus {
   padding: 2rem;
 }
 
+.author-image {
+  max-width: 700px;
+}
+
 .avatar {
   border-radius: 100px;
   border: 1px solid var(--border);
   object-fit: cover;
   width: 160px;
   height: 160px;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  border: 1px solid var(--border);
 }
 
 .status {
@@ -277,11 +307,74 @@ footer {
   display: none;
 }
 
-@media screen and (max-width: 1200px) {
+.about-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0rem;
+
+  h4 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  p {
+    text-align: right;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--hover);
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+}
+
+.photo-half {
+  margin-top: 1rem;
+  width: 48%;
+}
+
+.row-photos {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.hide-on-full {
+  display: none;
+}
+
+.scroll {
+  overflow-y: auto;
+  max-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1450px) {
   footer {
     p {
       width: 40%;
     }
+  }
+
+  .main {
+    flex-direction: column;
+  }
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .hide-on-full {
+    display: flex;
   }
 }
 
@@ -338,5 +431,13 @@ footer {
 
   footer {
     flex-direction: column;
+  }
+
+  .row-photos {
+    flex-direction: column;
+  }
+
+  .photo-half {
+    width: 100%;
   }
 }
