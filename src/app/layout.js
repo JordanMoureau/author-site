@@ -25,11 +25,8 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://use.typekit.net/tgd0yid.css" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <MobileNav />
         <div className="background-overlay"> </div>
         {children}
-
-        <Footer />
       </body>
     </html>
   );

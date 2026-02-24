@@ -1,6 +1,8 @@
 import AuthorCard from "../components/authorCard";
 import Navigation from "../components/nav";
 import ContactForm from "../components/contactForm";
+import MobileNav from "../components/mobileNav";
+import Footer from "../components/footer";
 
 export const metadata = {
   title: "J. Moureau | Author of the Aster of Warhaven series",
@@ -11,6 +13,7 @@ export const metadata = {
 export default function Contact() {
   return (
     <div className="main">
+      <MobileNav />
       <div className="column">
         <AuthorCard />
         <Navigation />
@@ -28,6 +31,7 @@ export default function Contact() {
           </p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

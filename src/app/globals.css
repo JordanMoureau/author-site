@@ -65,7 +65,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right center;
-  background-attachment: fixed;
+
   position: fixed;
   top: 0;
   bottom: 0;
@@ -359,6 +359,73 @@ footer {
   gap: 1rem;
 }
 
+.social-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background);
+  max-width: 700px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  a {
+    text-align: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+}
+
+.social:hover {
+  background-color: var(--hover);
+}
+
+.subscribe-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.subscribe-wrapper.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.mobile-menu {
+  display: flex;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+
+  padding: 0;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 0rem;
+  overflow: hidden;
+
+  a {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+.mobile-menu.open {
+  margin-top: 1rem;
+  height: fit-content;
+  max-height: 200px;
+  opacity: 1;
+  gap: 1rem;
+}
+
 @media screen and (max-width: 1450px) {
   footer {
     p {
@@ -405,6 +472,7 @@ footer {
 
   .mobile-nav {
     display: flex;
+    flex-direction: column;
   }
 
   .nav {
@@ -439,5 +507,9 @@ footer {
 
   .photo-half {
     width: 100%;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 }

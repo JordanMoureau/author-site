@@ -6,6 +6,8 @@ import LatestPost from "./components/latestPost";
 import Navigation from "./components/nav";
 import Subscribe from "./components/subscribe";
 
+import MobileNav from "./components/mobileNav";
+
 export const metadata = {
   title: "J. Moureau | Author of the Aster of Warhaven series",
   description:
@@ -15,6 +17,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div className="main">
+      <MobileNav />
       <div className="column">
         <AuthorCard />
         <Navigation />
@@ -24,6 +27,7 @@ export default function Home() {
         <Subscribe />
         <LatestPost />
       </div>
+      <Footer />
     </div>
   );
 }
