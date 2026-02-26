@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Subscribe from "../components/subscribe";
 
-export default function SocialLinks() {
+export default function PreOrderAster() {
   const [showSubscribe, setShowSubscribe] = useState(false);
   return (
     <div className="social-column">
