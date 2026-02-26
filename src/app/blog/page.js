@@ -19,10 +19,14 @@ export default function Blog() {
       <div className="column">
         <AuthorCard />
         <Navigation />
-        <AllPosts />
+        {/* <AllPosts /> */}
+
+        <div className="card">
+          <h2>Coming soon...</h2>
+        </div>
       </div>
       <div className="column">
-        <LatestPost />
+        {/* <LatestPost /> */}
         <Subscribe />
       </div>
       <Footer />

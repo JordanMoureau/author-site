@@ -178,6 +178,37 @@ a {
   justify-content: end;
 }
 
+.subscribe {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.subscribe-button {
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  color: #fff;
+  flex-direction: row;
+  align-items: center;
+  max-width: 700px;
+  padding: 0.6rem 0.6rem;
+  font-family: myriad-pro, sans-serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 700;
+  display: flex;
+}
+
+.subscribe-button:hover {
+  background-color: var(--hover);
+  cursor: pointer;
+}
+
 input {
   background-color: var(--background);
   border: 1px solid var(--border);
